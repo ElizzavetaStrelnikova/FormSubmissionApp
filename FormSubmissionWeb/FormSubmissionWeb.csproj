@@ -7,7 +7,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="ClientApp\" />
+    <Folder Include="ClientApp\src\components\" />
   </ItemGroup>
 
 </Project>

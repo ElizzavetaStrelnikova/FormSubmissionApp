@@ -6,9 +6,14 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "deploy": "npm run build && xcopy /y /e /i \"dist\\*\" \"..\\backend\\wwwroot\\\""
+  },
+  "dependencies": {
+    "vue": "^3.4.0"
   },
   "devDependencies": {
+    "@vitejs/plugin-vue": "^5.0.4",
     "vite": "^6.2.0"
   }
 }

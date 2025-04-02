@@ -1,24 +1,17 @@
-import './style.css'
-import javascriptLogo from './javascript.svg'
-import viteLogo from '/vite.svg'
-import { setupCounter } from './counter.js'
+import { createApp } from 'vue'
+import App from './App.vue'
+import { createRouter, createWebHistory } from 'vue-router'
+import ContactForm from './components/ContactForm.vue'
+import SubmissionsList from './components/SubmissionsList.vue'
 
-document.querySelector('#app').innerHTML = `
-  <div>
-    <a href="https://vite.dev" target="_blank">
-      <img src="${viteLogo}" class="logo" alt="Vite logo" />
-    </a>
-    <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank">
-      <img src="${javascriptLogo}" class="logo vanilla" alt="JavaScript logo" />
-    </a>
-    <h1>Hello Vite!</h1>
-    <div class="card">
-      <button id="counter" type="button"></button>
-    </div>
-    <p class="read-the-docs">
-      Click on the Vite logo to learn more
-    </p>
-  </div>
-`
+const router = createRouter({
+    history: createWebHistory(),
+    routes: [
+        { path: '/', component: ContactForm },
+        { path: '/submissions', component: SubmissionsList }
+    ]
+})
 
-setupCounter(document.querySelector('#counter'))
+const app = createApp(App)
+app.use(router)
+app.mount('#app')

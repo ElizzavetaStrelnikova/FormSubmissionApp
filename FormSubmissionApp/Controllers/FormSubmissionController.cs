@@ -5,7 +5,7 @@ using Microsoft.AspNetCore.Mvc;
 namespace FormSubmissionApp.Controllers;
 
 [ApiController]
-[Route("[controller]")]
+[Route("api/formsubmission")]
 public class FormSubmissionController : ControllerBase
 {
     private readonly IFormSubmissionService _submissionService;

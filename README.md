@@ -1,22 +1,22 @@
 ﻿# TASK 2
 
-I haven't had an opportunity yet to work with such large files in an app but I have reseached and figured out that there are some popular ways to hadle this situation are:
+I haven't had an opportunity yet to work with such large files in an app but I have reseached and figured out that there are some popular ways to hadle this situation:
 1. Chunking - splitting the data to smaller types. For example, in JS we can use the method *Blob.slice* to split the data to the smaller parts of 10 MB in size. This will minimize memory usage.
 2. We can create an ability for a user to pause an uploading of the file and start it later from the point it ended with.
 3. Streaming - stream it directly to its destination (avoid caching locally), this reduce memory consumption.
--  As for the architecture, we have Frontend and Backend as usual. 
+#####  As for the architecture, we have Frontend and Backend as usual. 
 + Frontend has Vue.js form with file input that splits large files into smaller chunks (10 MB). 
 + Backend has two main services:
 
 1. Submission service (handles form data)
 2. Attachment service (handles file storage)
 
-- In the database we have a table for submissions and attachments:
+##### In the database we have a table for submissions and attachments:
 
 + ID (unique identifier)
 + FormType (text)
 + SubmissionDate (datetime)
-
+============================================
 + ID (unique identifier)
 + SubmissionID (links to submission)
 + FileName (text)
@@ -24,7 +24,7 @@ I haven't had an opportunity yet to work with such large files in an app but I h
 + StoragePath (text - where file is saved)
 + ContentType (text - file type)
 
-- API:
+##### API:
 
 1. Client submits form without files first.
 
@@ -44,7 +44,7 @@ I haven't had an opportunity yet to work with such large files in an app but I h
 
 + Download files: GET /api/attachments/{id}
 
-- For production the best way is to add cloud storage integration.
+##### For production the best way is to add cloud storage integration.
 
 # Form Submission Application
 

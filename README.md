@@ -16,7 +16,7 @@ I haven't had an opportunity yet to work with such large files in an app but I h
 + ID (unique identifier)
 + FormType (text)
 + SubmissionDate (datetime)
-============================================
+***
 + ID (unique identifier)
 + SubmissionID (links to submission)
 + FileName (text)

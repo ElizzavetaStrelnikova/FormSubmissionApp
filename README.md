@@ -45,38 +45,38 @@ A full-stack application for submitting web forms with storage, listing, and sea
 1. Clone the repository.
 2. Install frontend dependencies: 
 
-cd FormSubmissionApp/ClientApp
-npm install
++ cd FormSubmissionApp/ClientApp
++ npm install
 
 3. Restore backend packages:
 
-cd FormSubmissionApp
-dotnet restore
++ cd FormSubmissionApp
++ dotnet restore
 
 ## Development
 ### Running Locally
 1. Start the backend API:
 
-cd FormSubmissionApp
-dotnet run
-(API available at http://localhost:5182)
++ cd FormSubmissionApp
++ dotnet run
++ (API available at http://localhost:5182)
 
 2. Start the frontend development server:
 
-cd FormSubmissionApp/ClientApp
-npm run dev
-(App available at http://localhost:5173)
++ cd FormSubmissionApp/ClientApp
++ npm run dev
++ (App available at http://localhost:5173)
 
 ## Building for Production
 1. Build the frontend:
 
-cd FormSubmissionApp/ClientApp
-npm run build
-This creates optimized assets in /frontend/dist
++ cd FormSubmissionApp/ClientApp
++ npm run build
++ This creates optimized assets in /frontend/dist
 
 2. Deploy to backend wwwroot:
 
-copy the folder *dist* from ClientApp to *wwwroot* in backend
++ copy the folder *dist* from ClientApp to *wwwroot* in backend
 
 ## API Endpoints
 - POST /api/submissions - Submit new form data

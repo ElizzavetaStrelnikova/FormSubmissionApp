@@ -33,24 +33,6 @@ A full-stack application for submitting web forms with storage, listing, and sea
  
 + CORS - Cross-origin resource sharing
 
-## Project Structure
-form-submission-app/
-├── backend/                  # ASP.NET Core Web API
-│   ├── Controllers/          # API endpoints
-│   ├── Services/             # Business logic
-│   ├── Models/               # 
-│   ├── Program.cs            # Application entry point
-│   └── appsettings.json      # Configuration
-├── frontend/                 # Vue.js application
-│   ├── public/               # Static assets
-│   ├── src/                  # Application code
-│   │   ├── components/       # Vue components
-│   │   ├── App.vue           # Root component
-│   │   └── main.js           # Application entry
-│   ├── package.json          # Frontend dependencies
-│   └── vite.config.js        # Build configuration
-└── README.md                 # Project documentation
-
 ## Setup Instructions
 ### Prerequisites
 - Node.js (v16+ recommended)
